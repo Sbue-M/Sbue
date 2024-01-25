@@ -1,71 +1,11 @@
-//JS code for the chatbot
+// JS code for the chatbot
 
 // Common chat replies
 const commonReplies = [
     { input: 'developer', reply: 'Sibusiso Mkhize' },
-  
-    { input: '', reply: '' },
-  
-    { input: '', reply: '' },
-  
-    { input: '', reply: '' },
-  
-    { input: '', reply: '' },
-  
-    { input: '', reply: '' },
-  
-    { input: '', reply: '' },
-  
-    { input: '', reply: '' },
-  
-    { input: '', reply: '' },
-  
-    { input: '', reply: '' },
-  
-    { input: '', reply: '' },
-  
-    { input: '', reply: '' },
-  
-    { input: '', reply: '' },
-  
-    { input: '', reply: '' },
-  
-    { input: '', reply: '' },
-  
-    { input: '', reply: '' },
-  
-    { input: '', reply: '' },
-  
-    { input: '', reply: '' },
-  
-    { input: '', reply: '' },
-  
-    { input: '', reply: '' },
-  
-    { input: '', reply: '' },
-  
-    { input: '', reply: '' },
-  
-    { input: '', reply: '' },
-  
-    { input: '', reply: '' },
-  
-    { input: '', reply: '' },
-  
-    { input: '', reply: '' },
-  
-    { input: '', reply: '' },
-  
-    { input: '', reply: '' },
-  
-    { input: '', reply: '' },
-  
-    { input: '', reply: '' },
-  
-    { input: '', reply: '' },
-  
-    { input: '', reply: '' },
-  ];
+    // Add more entries with meaningful input and replies
+
+];
 
 // Function to find a matching reply
 function findReply(message) {
@@ -78,7 +18,7 @@ function findReply(message) {
             return commonReplies[i].reply;
         }
     }
-return "I'm sorry, I don't understand. Can you please rephrase your message?";
+    return "I'm sorry, I don't understand. Can you please rephrase your message?";
 }
 
 // Function to add a user message to the chat log
@@ -105,7 +45,7 @@ function addBotMessage(message) {
 function handleUserInput() {
     const userInput = document.getElementById('userInput');
     const message = userInput.value.trim();
-if (message !== '') {
+    if (message !== '') {
         addUserMessage(message);
         userInput.value = '';
 
@@ -123,9 +63,7 @@ document.getElementById('sendBtn').addEventListener('click', handleUserInput);
 
 // Event listener for enter key press
 document.addEventListener('keypress', (event) => {
-    if (event.keyCode === 13 || event.which === 13) {
+    if (event.key === 'Enter') {
         handleUserInput();
     }
 });
-
-
